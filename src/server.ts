@@ -1,11 +1,10 @@
 import { app } from './app'
 import { env } from './env'
 
-const port = env.PORT || 3333
 app
   .listen({
-    port,
+    port: env.PORT,
   })
   .then(() => {
-    console.log(`Server is running on Port ${port}`)
+    console.log('Server is running !')
   })
