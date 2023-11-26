@@ -8,7 +8,7 @@ import fs from 'node:fs'
 export const app = fastify()
 
 const htmlContent = fs.readFileSync(
-  path.resolve(__dirname, 'src/public/home.html'),
+  path.resolve(__dirname, '/public/home.html'),
   'utf8',
 )
 
