@@ -5,6 +5,8 @@ import path from 'node:path'
 import { GetActivityParams } from './core/Activity/controller/GetActivityParams'
 import { GetAnalytics } from './core/Analytics/GetAnalytics'
 import { CreateActivity } from './core/Activity/controller/CreateActivity'
+import { FetchActivity } from './core/Activity/controller/FetchActivity'
+import { FetchAllAnalytics } from './core/Analytics/FetchAllAnalytics'
 
 export const app = fastify()
 
@@ -45,12 +47,12 @@ app.post('/deploy-atividade', async (request, reply) => {
   return CreateActivity(request, reply)
 })
 
-app.get('/deploy-atividade/activityID', async () => {
-  // TODO: implementar
+app.post('/deploy-atividade/:activityID', async (request, reply) => {
+  FetchActivity(request, reply)
 })
 
 app.get('/deploy-atividade', async (request, reply) => {
-  return CreateActivity(request, reply)
+  // TODO
 })
 
 // ------- Analytics -------
@@ -59,8 +61,8 @@ app.get('/deploy-atividade', async (request, reply) => {
  * dos analytics de todos os utilizadores de uma instância da
  * atividade na Inven!RA, fornecida como parâmetro;
  */
-app.post('/analytics_url', async () => {
-  // TODO: implementar a função SaveAnalytics
+app.post('/analytics-atividade', async (request, reply) => {
+  FetchAllAnalytics(request, reply)
 })
 
 /**

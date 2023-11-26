@@ -24,6 +24,6 @@ export async function CreateActivity(
   console.log(activityDB.getAll())
 
   reply.status(200).send({
-    deployURL: `https://${request.headers.host}/activity/${activityID}`,
+    deployURL: `https://${request.headers.host}/deploy-atividade/${activityID}`,
   })
 }
