@@ -2,7 +2,6 @@ import fastify from 'fastify'
 import fastifyStatic from '@fastify/static'
 import { activityRoutes } from './routes/activity'
 import path from 'node:path'
-import fs from 'node:fs'
 
 export const app = fastify()
 
