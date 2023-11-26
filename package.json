@@ -4,7 +4,7 @@
   "description": "Project carried out as part of the course Software Architecture and Patterns",
   "main": "index.js",
   "engines": {
-    "node": ">=18"
+    "node": "18"
   },
   "scripts": {
     "dev": "tsx watch src/server.ts",
